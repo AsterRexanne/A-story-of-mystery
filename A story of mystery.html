@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A story of mystery</title><style>
+        body.dark {
+            color: rgb(248, 174, 174);
+            background:rgb(58, 46, 46) ;
+        }
+        button {
+            display: block;
+            margin: 5px;
+        }
+        .textEntry {
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Basement</h1>
+    <p id="story">I needed to locate my friend, and he's tucked away in the basement</p>
+    <button onclick="goDark()">Time to get things rolling!</button>
+    <div class="textEntry">Type your name here, if you dare:<input type = "text" id="name"></div>
+    <button onclick="typeAndScream()">Click at your own risk</button>
+    <button onclick="finishTheStory()">Fill me in!</button>
+    <script>
+        function typeAndScream() {
+            var personName = document.getElementById("name").value;
+            alert("Didn't I mention that you shouldn't do that? " + personName)
+        }
+        function goDark() {
+            document.body.className= "dark";
+        }
+        function finishTheStory() {
+            document.getElementById("story").innerHTML = "Upon a detailed search of the musty dungeon, I located you!";
+        }
+    </script>
+</body>
+</html>
